@@ -1,0 +1,13 @@
+<div class="organisation-card">
+	{{#each-in orgDetails as |key value|}}
+		<div class="info_strip">
+			<p class="key text-uppercase">{{key}}</p>
+			<p class="key"> &nbsp;: &nbsp;</p>
+			<p class="value"> {{value}}</p>
+		</div>
+	{{/each-in}}
+</div>
+
+{{yield}}
+
+

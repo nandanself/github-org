@@ -1,0 +1,22 @@
+<div class="repo-card">
+	<p class="title">Repos of Angular Organisation</p>
+	<div class="info-strip">
+		<p>ID</p>
+		<p class="name">Name</p>
+		<p class="url">Url</p>
+		<p>watchers</p>
+		<p>issues</p>
+	</div>
+	{{#each repos as |repo|}}
+		<a href={{repo.url}} target="_blank" >
+			<div class="info-strip">
+				<p >{{repo.id}}</p>
+				<p class="name" >{{repo.name}}</p>
+				<p class="url" >{{repo.html_url}}</p>
+				<p >{{repo.watchers_count}}</p>
+				<p >{{repo.open_issues}}</p>
+			</div>
+		</a>		
+	{{/each}}
+</div>
+{{yield}}

@@ -1,0 +1,22 @@
+<div class="team-card">
+	<p class="title text-uppercase">Team members</p>
+
+	{{#if isLoading}}
+		{{loading-spinner}}
+	{{else}}	
+		
+		{{#each teamMembers as |member|}}
+			<a href={{member.html_url}} target="_blank">
+				<div class="info-strip">
+					{{profile-picture src=member.avatar_url}}
+					<p>{{member.login}}</p>
+				</div>	
+			</a>
+		{{/each}}
+
+	{{/if}}
+
+
+
+</div>
+{{yield}}
